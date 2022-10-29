@@ -3,6 +3,7 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
+  --primary-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   background-color: var(--primary-white-color);
@@ -124,6 +125,9 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--primary-animation);
 
   color: var(--title-text-color);
   font-weight: 500;
@@ -261,6 +265,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--primary-animation);
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
@@ -277,6 +285,9 @@ img {
 /* Контакт-лист */
 .contact-item {
   color: var(--title-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--primary-animation);
 }
 
 .contact-item:hover,
@@ -390,6 +401,9 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--primary-animation)
 }
 .contact-link-header:hover,
 .contact-link-header:focus {
@@ -441,6 +455,10 @@ img {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
+
+  transition-property: background-color, color, box-shadow, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: var(--primary-animation);
 }
 .button-list:hover,
 .button-list:focus {
@@ -473,6 +491,14 @@ img {
   margin-left: 30px;
   margin-top: 30px;
   border: 1px solid #eeeeee;
+
+ 
+}
+.portfolio-list-item {
+  transition-property:  box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--primary-animation);
+  
 }
 
 .portfolio-list-item:hover,
@@ -501,13 +527,20 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  
 }
 .client-list-icon {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--primary-animation);
 }
 .client-link:hover {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
+
+  
 }
 .client-link:hover .client-list-icon,
 .client-link:focus .client-list-icon {
@@ -540,3 +573,10 @@ img {
 .footer-info {
   margin-right: 70px;
 }
+
+/* Оверлеі */
+
+.about-us-overlay {
+  position: relative;
+}
+
